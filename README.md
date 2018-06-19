@@ -4,13 +4,12 @@ Experiment in models built by tensorflow in python, and loaded into java
 
 (Examples all use [tensorflow 1.8](https://www.tensorflow.org/api_docs/))
 
-## models built by python tensorflow
+## models by python tensorflow
 
-* [model variables](model/by_variables) -- [save_model_variables.py](python/save_model_variables.py) & [load_model_variables](python/load_model_variables.py)
 * [model (graph)](model/by_graph) -- [save_model.py](python/save_model.py) & [load_model.py](load_model.py)
 
 
-## models loaded by java
+## models loaded by java tensorflow
 
 * [tensorflow java api](java/tensorflow)  ( mvn compile exec:java -q )
 * [dl4j (deeplearning4j)](java/dl4j) *todo*

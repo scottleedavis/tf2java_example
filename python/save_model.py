@@ -18,7 +18,7 @@ pred = tf.add(tf.multiply(X, W), b)
 cost = tf.reduce_sum(tf.pow(pred-Y, 2))/(2*n_samples)
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 init = tf.global_variables_initializer()
-export_dir='../model/by_graph/linear'
+export_dir='../model/linear'
 builder = tf.saved_model.builder.SavedModelBuilder(export_dir)
 
 with tf.Session() as sess:

@@ -4,7 +4,7 @@ import numpy
 import matplotlib.pyplot as plt
 rng = numpy.random
 
-export_dir='../model/by_graph/linear'
+export_dir='../model/linear'
 
 with tf.Session() as sess:  
 	tf.saved_model.loader.load(sess, [tf.saved_model.tag_constants.TRAINING], export_dir)
