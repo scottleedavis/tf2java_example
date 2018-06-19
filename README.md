@@ -9,7 +9,6 @@ Experiment in using tensorflow models built in python, and loaded into java
 * [model (graph)](model/linear) -- [save_model.py](python/save_model.py) & [load_model.py](load_model.py)
 
 
-## tensorflow models loaded (java)
+## tensorflow model loaded (java)
 
-* [tensorflow java api](java/tensorflow)  ( mvn compile exec:java -q )
-* [dl4j (deeplearning4j)](java/dl4j) *todo*
+* [tensorflow java api](java/tensorflow)  ( mvn compile exec
