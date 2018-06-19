@@ -1,6 +1,8 @@
 # tf2java_example
 
-Taking models built by tensorflow in python, and loaded into java
+Experiment in models built by tensorflow in python, and loaded into java  
+
+(Examples all use tensorflow 1.8)
 
 ## models built by python tensorflow
 
@@ -11,4 +13,4 @@ Taking models built by tensorflow in python, and loaded into java
 ## models loaded by java
 
 * [tensorflow (1.8)](java/tensorflow)  ( mvn compile exec:java -q )
-* [dl4j (deeplearning4j)](java/dl4j) 
+* [dl4j (deeplearning4j)](java/dl4j) *todo*
