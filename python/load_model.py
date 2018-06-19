@@ -12,7 +12,8 @@ with tf.Session() as sess:
 	b = sess.run('bias:0')
 
 	print("W: %.2f, b: %.2f" % (W, b))
-	x = numpy.asarray([1.0, 4.0, 7.0, 10.0])
-	plt.plot(x, W * x +  b, label='Fitted line')
-	plt.legend()
-	plt.show()
+	# x = numpy.asarray([1.0, 4.0, 7.0, 10.0])
+	# print( W * x +  b)
+	# plt.plot(x, W * x +  b, label='Fitted line')
+	# plt.legend()
+	# plt.show()
