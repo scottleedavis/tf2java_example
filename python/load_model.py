@@ -4,16 +4,15 @@ import numpy
 import matplotlib.pyplot as plt
 rng = numpy.random
 
-W = tf.Variable(rng.randn(), name="weight")
-b = tf.Variable(rng.randn(), name="bias")
-saver = tf.train.Saver()
+export_dir='../model/by_graph/linear'
 
-with tf.Session() as sess:
-	saver.restore(sess, "../model/by_variables/linear.ckpt")
-	print("Model restored.")
-	print("W : %s" % W.eval())
-	print("b : %s" % b.eval())
+with tf.Session() as sess:  
+	tf.saved_model.loader.load(sess, [tf.saved_model.tag_constants.TRAINING], export_dir)
+	W = sess.run('weight:0')
+	b = sess.run('bias:0')
+
+	print("W: %.2f, b: %.2f" % (W, b))
 	x = numpy.asarray([1.0, 4.0, 7.0, 10.0])
-	plt.plot(x, sess.run(W) * x +  sess.run(b), label='Fitted line')
+	plt.plot(x, W * x +  b, label='Fitted line')
 	plt.legend()
 	plt.show()

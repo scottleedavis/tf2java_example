@@ -18,8 +18,8 @@ pred = tf.add(tf.multiply(X, W), b)
 cost = tf.reduce_sum(tf.pow(pred-Y, 2))/(2*n_samples)
 optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cost)
 init = tf.global_variables_initializer()
-
-saver = tf.train.Saver()
+export_dir='../model/by_graph/linear'
+builder = tf.saved_model.builder.SavedModelBuilder(export_dir)
 
 with tf.Session() as sess:
     sess.run(init)
@@ -30,8 +30,9 @@ with tf.Session() as sess:
             c = sess.run(cost, feed_dict={X: train_X, Y:train_Y})
 
     training_cost = sess.run(cost, feed_dict={X: train_X, Y: train_Y})
+    builder.add_meta_graph_and_variables(sess,
+                                       [tf.saved_model.tag_constants.TRAINING],
+                                       signature_def_map=None,
+                                       assets_collection=None)
 
-    save_path = saver.save(sess, "../model/by_variables/linear.ckpt")
-    print("Model saved in path: %s" % save_path)
-    print("W : %s" % sess.run(W))
-    print("b : %s" % sess.run(b))
+builder.save()
