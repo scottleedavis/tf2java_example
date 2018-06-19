@@ -6,7 +6,7 @@ Test using tensorflow models built in python, and loaded into java
 
 ## tensorflow model created (python)
 
-* [model (graph)](model/linear) -- [save_model.py](python/save_model.py) & [load_model.py](load_model.py)
+* [model (graph)](model/linear) -- [save_model.py](python/save_model.py) & [load_model.py](python/load_model.py)
 
 
 ## tensorflow model loaded (java)
