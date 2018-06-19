@@ -31,7 +31,7 @@ with tf.Session() as sess:
 
     training_cost = sess.run(cost, feed_dict={X: train_X, Y: train_Y})
 
-    save_path = saver.save(sess, "../model/linear.ckpt")
+    save_path = saver.save(sess, "../model/by_variables/linear.ckpt")
     print("Model saved in path: %s" % save_path)
     print("W : %s" % sess.run(W))
     print("b : %s" % sess.run(b))

@@ -9,7 +9,7 @@ b = tf.Variable(rng.randn(), name="bias")
 saver = tf.train.Saver()
 
 with tf.Session() as sess:
-	saver.restore(sess, "../model/linear.ckpt")
+	saver.restore(sess, "../model/by_variables/linear.ckpt")
 	print("Model restored.")
 	print("W : %s" % W.eval())
 	print("b : %s" % b.eval())
