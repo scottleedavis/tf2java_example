@@ -12,5 +12,5 @@ Experiment in models built by tensorflow in python, and loaded into java
 
 ## models loaded by java
 
-* [tensorflow java api)](java/tensorflow)  ( mvn compile exec:java -q )
+* [tensorflow java api](java/tensorflow)  ( mvn compile exec:java -q )
 * [dl4j (deeplearning4j)](java/dl4j) *todo*
