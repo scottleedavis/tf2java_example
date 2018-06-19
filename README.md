@@ -2,7 +2,7 @@
 
 Experiment in models built by tensorflow in python, and loaded into java  
 
-(Examples all use tensorflow 1.8)
+(Examples all use [tensorflow 1.8](https://www.tensorflow.org/api_docs/))
 
 ## models built by python tensorflow
 
@@ -12,5 +12,5 @@ Experiment in models built by tensorflow in python, and loaded into java
 
 ## models loaded by java
 
-* [tensorflow (1.8)](java/tensorflow)  ( mvn compile exec:java -q )
+* [tensorflow java api)](java/tensorflow)  ( mvn compile exec:java -q )
 * [dl4j (deeplearning4j)](java/dl4j) *todo*
